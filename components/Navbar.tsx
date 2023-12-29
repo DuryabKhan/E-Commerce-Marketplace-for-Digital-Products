@@ -4,6 +4,7 @@ import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 
 const Navbar =() =>{
+    const user = null;
     return(
         <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
             <header className="relative bg-white">
@@ -19,6 +20,12 @@ const Navbar =() =>{
                             </div>
                             <div className="hidden z-50  lg:ml-8 lg:block lg:self-stretch">
                                 <NavItems />
+                            </div>
+
+                            <div className="ml-auto flex items-center">
+                                <div className="hidden lg-flex lg:flex-1 lg:items-center lg:justify-center lg:space-x-6">
+                                    {user ? null : <Link href='/sign-in'>SignIn</Link>}
+                                </div>
                             </div>
                         </div>
                     </div>
